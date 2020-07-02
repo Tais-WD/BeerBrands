@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from "react";
+import Card from './Card.js';
+import styled from 'styled-components';
+
+const Container = styled.div`
+padding:50px 90px 70px 90px;
+display:grid;
+grid-template-columns: repeat(4, 1fr [col-start]);
+grid-template-rows: repeat(5, 1fr [col-start]);
+column-gap: 10px;
+row-gap: 28px;
+background-color:#C4C4C4;
+`
+
+class App extends React.Component {
+  render() {
+   return(
+     <Container>
+       <Card/>
+     </Container>
+   )
+  }
 }
-
 export default App;
